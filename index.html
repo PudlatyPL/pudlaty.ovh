@@ -6,8 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pudlaty</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <style>
+    body {
+      background-color: #111;
+    }
+    .loader {
+      width: 35px;
+      aspect-ratio: 1;
+      --_g: no-repeat radial-gradient(circle closest-side,#fff 90%,#000);
+      background: 
+        var(--_g) 0    0,
+        var(--_g) 0    100%,
+        var(--_g) 100% 100%;
+      background-size: 40% 40%;
+      animation:l11 1s infinite linear;
+    }
+    @keyframes l11 {
+        25% {background-position:100% 0   ,0 100%,100% 100%}
+        50% {background-position:100% 0   ,0 0   ,100% 100%}
+        75% {background-position:100% 0   ,0 0   ,0    100%}
+        100%{background-position:100% 100%,0 0   ,0    100%}
+    }
+  </style>
+  <body class="dark">
+    <!-- Loader from https://css-loaders.com/ -->
+    <div id="root">
+      <div style="height: 80vh; width: 100%; display: flex; align-items: center; flex-direction: column; justify-content: center;">
+        <div class="loader"></div>
+        <br>
+        <h3 style="color: #fff; font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'">Loading...</h3>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
