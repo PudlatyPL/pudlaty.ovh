@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
 import NotFound from "./pages/NotFound";
+import Footer from "./components/footer";
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
 
             <Route path="*" element={<NotFound />} />
           </Routes>
+        {}
+        <Footer />
         {}
     </Router>
   );
