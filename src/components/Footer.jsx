@@ -1,6 +1,5 @@
 function Footer() {
-    return <div>
-        Footer
+    return <div className="flex">
     </div>
 }
 
