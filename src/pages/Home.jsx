@@ -1,15 +1,15 @@
-import { useEffect } from "react";
-
-import AOS from 'aos';
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import Projects from "../components/Projects";
+import WhatIUse from "../components/WhatIUse";
 
 function Home() {
-    useEffect(() => {AOS.init();},[])
 
     return <div>
         <Banner />
+        <WhatIUse />
         <Projects />
+        <Footer />
     </div>
 }
 

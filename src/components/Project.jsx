@@ -1,42 +1,31 @@
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
-function Project(props) {
-    var data = props.data;
-    return <div className="w-full">
-        <Link to={"/project/"+data.id}>
-            <div className="rounded-xl h-full group/item flex flex-col content-between" data-aos="fade-down" data-aos-delay={(data.id>6?6:data.id)*100} style={{backgroundColor: "#121213"}}>
-                <img src={data.imgURL} className="object-cover rounded-t-xl mb-6" alt="ProjectImage" />
-                <div className="pl-8 pr-8 pb-8">
-                    <p className="text-white font-bold text-2xl group-hover/item:text-violet-700 duration-200">{data.name}</p>
-                    <p className="text-zinc-400 font-normal">{data.description}</p>
-                    <div className="mt-8 flex flex-wrap gap-1">
-                        {data.tags.map((item) => (
-                            <a className="text-zinc-400 bg-zinc-900 font-medium pl-4 pr-4 rounded-xl p-2" key={item}>{item}</a>
-                        ))}
+export default function Project({data}) {
+    return <div className="rounded-md group/item flex flex-col justify-between bg-white/40 shadow-xl" data-aos="fade-down" data-aos-delay={(data.id>6?6:data.id)*100}>
+                <div>
+                    <img src={data.imgURL} className="object-cover rounded-t-md mb-6" alt="ProjectImage" />
+                    <div className="pl-8 pr-8 text-left">
+                        <p className="font-bold text-2xl cursor-default">{data.name}</p>
+                        <p className="font-semibold cursor-default">{data.description}</p>
                     </div>
-                    <div></div>
                 </div>
-                {/* <div className="pl-8 mb-6">
-                    <p className="text-zinc-400 font-medium group-hover/item:text-violet-700 duration-200">
-                        See more
-                    </p>
-                </div> */}
-            </div>
-        </Link>
-    </div>
+                <div></div>
+                <div className='pl-8 pr-8 pb-8'>
+                    <div className='mb-10 h-[8rem]'>
+                        <div className="cursor-default mt-8 flex flex-wrap gap-1">
+                            {data.tags.map((item) => (
+                                <a className="bg-white/40 font-medium pl-4 pr-4 rounded p-2 shadow" key={item}>{item}</a>
+                            ))}
+                        </div>
+                    </div>
+                    <Link to={"/project/" + data.codeName + "/"}>
+                        <button className='bg-white/40 border-white duration-100 font-medium p-2 pl-6 pr-6 float-left rounded shadow hover:bg-white/30 hover:shadow-lg active:bg-white/40 active:shadow'>Learn more</button>
+                    </Link>
+                </div>
+            </div>;
 }
 
-export default Project;
-
-
 Project.propTypes = {
-    data: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        codeName: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        imgURL: PropTypes.string.isRequired,
-        tags: PropTypes.array.isRequired,
-    }).isRequired
-};
+    data: PropTypes.object.isRequired,
+}

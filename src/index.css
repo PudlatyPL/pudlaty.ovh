@@ -2,15 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    border-radius: 0px;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    background-color: #000;
+@media (max-width: 767px) {
+  .banner {
+      height: calc(100vh - 3.6rem);
+  }
 }
 
 .icon {

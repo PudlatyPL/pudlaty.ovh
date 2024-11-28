@@ -1,8 +1,4 @@
-import AOS from "aos";
-import { useEffect } from "react";
-
 function NotFound() {
-    useEffect(()=>{AOS.init()})
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">

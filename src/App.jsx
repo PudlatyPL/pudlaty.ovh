@@ -1,27 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 import Home from "./pages/Home";
-import Project from "./pages/Project";
 
 import NotFound from "./pages/NotFound";
-import Footer from "./components/footer";
-
-import 'aos/dist/aos.css';
+import Navbar from "./components/navbar";
+import AboutProject from "./pages/AboutProject";
 
 function App() {
 
   return (
     <Router>
         {}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project/:id" element={<Project />} />
+          <Navbar />
+          <div className="md:w-[calc(100vw - 8rem)] md:ml-[8rem]">
+            {}
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/project/:codeName" element={<AboutProject />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        {}
-        <Footer />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            {}
+          </div>
         {}
     </Router>
   );
