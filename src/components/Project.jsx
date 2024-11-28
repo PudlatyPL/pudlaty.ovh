@@ -19,7 +19,7 @@ export default function Project({data}) {
                             ))}
                         </div>
                     </div>
-                    <Link to={"/project/" + data.codeName + "/"}>
+                    <Link to={"/project/" + data.codeName + "/"} onClick={() => {document.getElementById("content").scrollIntoView({ behavior: "smooth" })}}>
                         <button className='bg-white/40 border-white duration-100 font-medium p-2 pl-6 pr-6 float-left rounded shadow hover:bg-white/30 hover:shadow-lg active:bg-white/40 active:shadow'>Learn more</button>
                     </Link>
                 </div>
