@@ -19,7 +19,7 @@ function WhatIUse() {
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="Bootstrap" icon={<box-icon type='logo' name='bootstrap' ></box-icon>}/>
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="Linux" icon={<box-icon type='logo' name='tux' ></box-icon>}/>
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="SQL" icon={<box-icon type='logo' name='postgresql' ></box-icon>}/>
-                <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="Visual Stuido Code" icon={<box-icon type='logo' name='visual-studio' ></box-icon>}/>
+                <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="Visual Studio Code" icon={<box-icon type='logo' name='visual-studio' ></box-icon>}/>
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="GitHub" icon={<box-icon type='logo' name='github' ></box-icon>}/>
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="Git" icon={<box-icon type='logo' name='git' ></box-icon>}/>
                 <TechnologiesCard className={`${seeMore ? "" : "max-md:hidden"}`} name="HTML" icon={<box-icon  type='logo' name='html5' ></box-icon>}/>
